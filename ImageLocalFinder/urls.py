@@ -18,6 +18,7 @@ from django.conf.urls import patterns, url, include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', ImageLocalFinder.views.index, name='index'),
 
 ]
     

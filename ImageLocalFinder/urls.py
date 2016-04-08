@@ -21,10 +21,11 @@ from django.conf.urls.static import static
 
 import ImageLocalFinder.views
 import image_finder.urls
-
+import image_finder.api as image_finder_api
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^api/', include(image_finder_api.router.urls)),
 
     url(r'^$', ImageLocalFinder.views.index, name='index'),
     url(r'^', include('image_finder.urls', namespace='image_finder')),

@@ -2,12 +2,15 @@ from django.shortcuts import render
 from django.views.generic.edit import FormView
 from .forms import UploadForm
 #from .models import Attachment
+#from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse, HttpResponseRedirect
+from django.template import loader
 
 def image_finder_index(request):
 	template = loader.get_template('image_finder/image_finder_index.html')
 	context = {}
 	return HttpResponse(template.render(context, request))
-
+ 
 
 '''
 	if request.method == 'GET':

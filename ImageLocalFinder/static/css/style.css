@@ -4468,7 +4468,6 @@ footer p {
 }
 .footer-title {
   margin: 0 0 22px;
-  padding-top: 21px;
   font-size: 24px;
   line-height: 40px;
 }
@@ -4484,7 +4483,6 @@ footer p {
   background-color: #34495e;
   color: #fff;
   margin-left: 42px;
-  min-height: 316px;
   padding: 0 30px 30px;
 }
 .footer-banner .footer-title {

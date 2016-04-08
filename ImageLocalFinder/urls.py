@@ -15,14 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import patterns, url, include
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 import ImageLocalFinder.views
+import image_finder.urls
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', ImageLocalFinder.views.index, name='index'),
 
-]
+    url(r'^$', ImageLocalFinder.views.index, name='index'),
+    url(r'^', include('image_finder.urls', namespace='image_finder')),
+
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     
 
 

@@ -37,8 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'db_file_storage',
-    'file_upload',
     'image_finder',
     #'security',
 
@@ -77,10 +75,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ImageLocalFinder.wsgi.application'
-
-# Default storage in DB
-# https://github.com/victor-o-silva/db_file_storage/
-DEFAULT_FILE_STORAGE = 'db_file_storage.storage.DatabaseFileStorage'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
